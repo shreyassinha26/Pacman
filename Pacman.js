@@ -8,21 +8,21 @@ class Pacman{
     }
     display(){
         rectMode(CENTER);
-        if(keyDown(LEFT_ARROW)){
-            this.sprite.velocityX = -3;
-            this.sprite.velocityY = 0;
+        if(gamestate === 0&&keyDown(LEFT_ARROW)){
+            this.sprite.x -=3;
+            
         }
-        if(keyDown(RIGHT_ARROW)){
-            this.sprite.velocityX = 3;
-            this.sprite.velocityY = 0;
+        if(gamestate === 0&&keyDown(RIGHT_ARROW)){
+            this.sprite.x +=3;
         }
-        if(keyDown(UP_ARROW)){
-            this.sprite.velocityY = -3;
-            this.sprite.velocityX = 0;
+        if(gamestate === 0&&keyDown(UP_ARROW)){
+            this.sprite.y -=3;
         }
-        if(keyDown(DOWN_ARROW)){
-            this.sprite.velocityY = 3;
-            this.sprite.velocityX = 0;
+        if(gamestate === 0&&keyDown(DOWN_ARROW)){
+            this.sprite.y +=3;
+        }
+        if(this.sprite.isTouching(ghost)){
+            gamestate =1;
         }
     }
 }
