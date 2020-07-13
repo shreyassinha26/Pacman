@@ -8,16 +8,16 @@ class Ghost{
     display(){
         this.sprite.collide(wall);
         if(pacman.sprite.x>this.x&&gamestate === 0){
-            this.sprite.velocityX=3;
+            this.sprite.velocityX=2;
         }
         else if(gamestate === 0){
-            this.sprite.velocityX=-3;
+            this.sprite.velocityX=-2;
         }
         if(pacman.sprite.y>this.y&&gamestate === 0){
-            this.sprite.velocityY=3;
+            this.sprite.velocityY=2;
         }
         else if(gamestate === 0){
-            this.sprite.velocityY=-3;
+            this.sprite.velocityY=-2;
         }
         this.x=this.sprite.x;
         this.y=this.sprite.y;
