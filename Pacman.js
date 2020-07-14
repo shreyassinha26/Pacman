@@ -12,13 +12,13 @@ class Pacman{
             this.sprite.x -=3;
             
         }
-        if(gamestate === 0&&keyDown(RIGHT_ARROW)){
+        else if(gamestate === 0&&keyDown(RIGHT_ARROW)){
             this.sprite.x +=3;
         }
-        if(gamestate === 0&&keyDown(UP_ARROW)){
+        else if(gamestate === 0&&keyDown(UP_ARROW)){
             this.sprite.y -=3;
         }
-        if(gamestate === 0&&keyDown(DOWN_ARROW)){
+        else if(gamestate === 0&&keyDown(DOWN_ARROW)){
             this.sprite.y +=3;
         }
         if(this.sprite.isTouching(ghost)){

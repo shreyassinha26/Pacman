@@ -18,28 +18,28 @@ function setup(){
     edge2 = createSprite(450,225,1,450);
     edge3 = createSprite(225,450,450,1);
     edges = [edge0,edge1,edge2,edge3];
-    wall1 = new Wall(15,435,30,1);
-    wall2 = new Wall(45 , 405 , 30,1);
-    wall3 = new Wall(15,375,30,1);
-    wall4 = new Wall(45 , 345 , 30,1);
-    wall5 = new Wall(15,315,30,1);
-    wall6 = new Wall(45 , 285 , 30,1);
-    wall7 = new Wall(15,255,30,1);
-    wall8 = new Wall(45 , 225 , 30,1);
-    wall9 = new Wall(15,195,30,1);
-    wall10= new Wall(45 , 165 , 30,1);
-    wall11= new Wall(15,135,30,1);
-    wall12= new Wall(45 , 105 , 30,1);
-    wall13= new Wall(15,75,30,1);
-    wall14= new Wall(225 , 45 , 390,1);
-    wall15= new Wall(15,15,30,1);
+    wall1 = new Wall(15,435,30,2);
+    wall2 = new Wall(45 , 405 , 30,2);
+    wall3 = new Wall(15,375,30,2);
+    wall4 = new Wall(45 , 345 , 30,2);
+    wall5 = new Wall(15,315,30,2);
+    wall6 = new Wall(45 , 285 , 30,2);
+    wall7 = new Wall(15,255,30,2);
+    wall8 = new Wall(45 , 225 , 30,2);
+    wall9 = new Wall(15,195,30,2);
+    wall10= new Wall(45 , 165 , 30,2);
+    wall11= new Wall(15,135,30,2);
+    wall12= new Wall(45 , 105 , 30,2);
+    wall13= new Wall(15,75,30,2);
+    wall14= new Wall(225 , 45 , 390,2);
+    wall15= new Wall(15,15,30,2);
     wall16= new Wall(390,405,60,1);
-    wall17= new Wall(285 , 375 , 1,150);
-    wall18= new Wall(105,255,1,330);
-    wall19= new Wall(405,225,1,60);
-    wall20= new Wall(255,105,90,1);
-    wall21= new Wall(255 , 195 , 1,150);
-    wall22= new Wall(225,390 , 90,1);
+    wall17= new Wall(285 , 375 , 2,150);
+    wall18= new Wall(105,255,2,330);
+    wall19= new Wall(405,225,2,60);
+    wall20= new Wall(255,105,90,2);
+    wall21= new Wall(255 , 195 , 2,150);
+    wall22= new Wall(225,390 , 90,2);
     
     square = [];
     ghost = new Group();
@@ -66,9 +66,18 @@ function draw(){
         
     }
 
-    ghost1.display();
-    ghost2.display();
-    ghost3.display();
+    
+    if(score>1000){
+        ghost1.display();
+    }
+    if(score>2000){
+        ghost2.display();
+    }
+    if(score>3000){
+        ghost3.display();
+    }
+    
+    
     drawSprites();
     
 }
